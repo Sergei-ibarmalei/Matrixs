@@ -28,16 +28,18 @@ int main()
 	M_ m(2, 3, m23_);
 	std::cout << "m: " << std::endl;
 	std::cout << m << std::endl;
-	unsigned int ticks = 100'000;
-	auto begin = std::chrono::steady_clock::now();
-	for (unsigned int i = 0; i < ticks; i++)
+	M_i mi(6, 6);
+	std::cout << mi << std::endl;
+	//unsigned int ticks = 100'000;
+	//auto begin = std::chrono::steady_clock::now();
+	/*for (unsigned int i = 0; i < ticks; i++)
 	{
 		auto tmpm = Transpose(m);
 	}
 	auto end = std::chrono::steady_clock::now();
 	auto middle = std::chrono::duration_cast<std::chrono::nanoseconds>((end - begin) / ticks);
 	std::cout << "100'000 times Transpose(): " <<
-		middle.count() << " ns\n";
+		middle.count() << " ns\n";*/
 	//std::cout << Transpose(m) << std::endl;
 	//M_ m2(2, 3, m23_);
 	//std::cout << m << std::endl;

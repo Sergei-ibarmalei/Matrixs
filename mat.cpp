@@ -17,6 +17,18 @@ M_::M_(unsigned int r, unsigned int c, float* ar)
 
 }
 
+M_::M_(unsigned int r, unsigned int c)
+{
+	assert(r > 0 && c > 0);
+
+	row = r;
+	col = c;
+	rowLength = col;
+	colHeight = row;
+	mLength = row * col;
+	mArr = new float[mLength] {};
+}
+
 M_::M_(const M_& other)
 {
 	this->row = other.row;
@@ -221,5 +233,19 @@ M_ operator-(const M_& one, const M_& two)
 }
 
 
-#undef sizet
 
+
+
+//=========M_identity======================
+
+M_i::M_i(unsigned int row, unsigned int col): M_(row, col)
+{
+	assert(row == col);
+
+	unsigned int c = 0;
+	for (unsigned int r = 0; r < rowLength; r++)
+	{
+		mArr[(r * rowLength) + c++] = 1;
+	}
+
+}

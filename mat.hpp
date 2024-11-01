@@ -10,7 +10,7 @@ enum class VectorKind  { VectorRow, VectorCol, };
 
 class M_
 {
-private:
+protected:
 
 	unsigned int row{ 0 };
 	unsigned int col{ 0 };
@@ -24,6 +24,7 @@ private:
 
 public:
 	M_(unsigned int r, unsigned int c, float* ar);
+	M_(unsigned int r, unsigned int c);
 	M_(const M_& other);
 	M_& operator=(const M_&) = delete;
 	~M_();
@@ -42,5 +43,12 @@ public:
 	friend M_ operator*(const M_& one, const M_& two);
 	friend M_ Transpose(const M_& m);
 
+
+};
+
+class M_i: public M_
+{
+	public:
+	M_i(unsigned int r, unsigned int c);
 
 };
