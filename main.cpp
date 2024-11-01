@@ -17,19 +17,23 @@ int main()
 	//std::cout << u << std::endl;
 	//std::cout << "u normailize: " << u.Norm() << std::endl;
 
-	float m14[4] = { 1.f,
-					2.f,
-					3.f,
-					4.f };
+	float m22[4] = { 1.f, 2.f,
+					 0.f, 4.f};
 
 	float m23_[6] = { 5.f, -1.f, 6.f,
 					 -3.f, 0.f, 7.f };
 
-	M_ m(2, 3, m23_);
+	M_ m(2, 2, m22);
 	std::cout << "m: " << std::endl;
 	std::cout << m << std::endl;
-	M_i mi(6, 6);
-	std::cout << mi << std::endl;
+	M_i mi22(2, 2);
+	std::cout << mi22 << std::endl;
+
+	if ((mi22 * m ) == (m * mi22))
+	{
+		std::cout << "equals \n";
+	}
+
 	//unsigned int ticks = 100'000;
 	//auto begin = std::chrono::steady_clock::now();
 	/*for (unsigned int i = 0; i < ticks; i++)

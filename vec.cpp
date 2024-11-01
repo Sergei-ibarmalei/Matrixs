@@ -1,7 +1,6 @@
 #include "vec.hpp"
 #include "vec.hpp"
 
-static const float eps{ 0.001f };
 
 static constexpr auto  x_ = 0;
 static constexpr auto  y_ = 1;

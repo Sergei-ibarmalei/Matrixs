@@ -6,6 +6,7 @@
 #include <cmath>
 
 
+static const float eps{ 0.001f };
 
 namespace mv
 {

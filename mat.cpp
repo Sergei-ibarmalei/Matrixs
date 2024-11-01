@@ -123,8 +123,8 @@ bool operator==(const M_& one, const M_& two)
 	{
 		for (unsigned int c = 0; c < one.col; c++)
 		{
-			if (one.mArr[r * one.rowLength + c] != 
-				two.mArr[r * two.rowLength + c]) return false;
+			if (std::abs(one.mArr[r * one.rowLength + c] - 
+				two.mArr[r * two.rowLength + c]) > eps) return false;
 		}
 	}
 	return true;
