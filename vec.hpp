@@ -6,11 +6,9 @@
 #include <cmath>
 
 
-//class M_;
 
 namespace mv
 {
-	
 	
 
 	class Vector
@@ -42,7 +40,6 @@ namespace mv
 		friend std::ostream& operator<<(std::ostream& os, const Vector& v);
 		friend float angleBetween(const Vector& one, const Vector& two);
 		friend float Magnitude(const Vector& v);
-		//friend Vector Mult(const Vector& v, int scalar);
 		
 
 		

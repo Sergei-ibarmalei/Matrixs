@@ -1,4 +1,4 @@
-#include "mat.h"
+#include "mat.hpp"
 
 
 M_::M_(unsigned int r, unsigned int c, float* ar)
@@ -14,7 +14,6 @@ M_::M_(unsigned int r, unsigned int c, float* ar)
 	{
 		mArr[i] = ar[i];
 	}
-	//std::cout << "Matrix construction.\n";
 
 }
 
@@ -30,7 +29,6 @@ M_::M_(const M_& other)
 	{
 		this->mArr[i] = other.mArr[i];
 	}
-	//std::cout << "Matrix copy construction.\n";
 
 }
 
@@ -40,7 +38,6 @@ M_::~M_()
 {
 	delete[] mArr;
 	mArr = nullptr;
-	//std::cout << "Matrix destruction.\n";
 }
 
 
@@ -207,7 +204,6 @@ M_ Transpose(const M_& m)
 		auto tmpArray = tmpVC.VArr();
 		for (unsigned int c = 0; c < newCol; c++)
 		{
-			//tmpmArr[r * newRowLength + c] = tmpVC.VArr()[c];
 			tmpmArr[r * newRowLength + c] = tmpArray[c];
 		}
 	}
